@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc test.c -o out | chmod +x |  ./out > c
+gcc $CFILE -o out | chmod +x |  ./out > c
