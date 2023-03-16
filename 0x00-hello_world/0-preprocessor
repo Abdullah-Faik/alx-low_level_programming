@@ -1,2 +1,2 @@
 #!/bin/bash
-gcc $CFILE -o out | chmod +x |  ./out > c
+gcc $CFILE -o c
