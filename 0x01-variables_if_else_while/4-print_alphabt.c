@@ -11,7 +11,7 @@ int main(void)
 	char start = 'a';
 
 	while (start <= 'z')
-	{	
+	{
 		if (start == 'e' || start == 'q')
 		{
 			start += 1;
