@@ -15,7 +15,7 @@ int main(void)
 		putchar(start);
 		start += 1;
 	}
-	start = 'A'
+	start = 'A';
 	while (start <= 'Z')
 	{
 		putchar(start);
