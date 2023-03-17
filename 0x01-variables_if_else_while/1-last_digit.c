@@ -6,7 +6,7 @@
 /**
  * main - test value of the last digit of n
  *
- * return: 0
+ * Return: 0
 */
 int main(void)
 {
@@ -21,7 +21,7 @@ int main(void)
 	else if (mod == 0)
 		printf("Last digit of %d is %d and is 0\n", n, mod);
 	else
-		printf("Last digit of %d is %d and is less than 6 and not 0", n, mod);
+		printf("Last digit of %d is %d and is less than 6 and not 0\n", n, mod);
 
 	return (0);
 }
