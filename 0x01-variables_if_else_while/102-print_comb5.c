@@ -17,10 +17,10 @@ int main(void)
 		j = 0;
 		while (j < 9)
 		{
-			k = 0;
+			k = i;
 			while (k < 10)
 			{
-				l = 0;
+				l = j + 1;
 				while (l < 10)
 				{
 					putchar(i + '0');
