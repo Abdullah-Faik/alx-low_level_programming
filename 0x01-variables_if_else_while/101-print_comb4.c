@@ -8,12 +8,16 @@ int main(void)
 {
 
 	int i = 0;
+	int k = 0;
+	int j = 0;
 
-	for (size_t i = 0; i < 8; i++)
+	while (i < 8)
 	{
-		for (size_t j = i + 1; j < 9; j++)
+		j = i + 1;
+		while (j < 9)
 		{
-			for (size_t k = j + 1; k < 10; k++)
+			k = j + 1;
+			while (k < 10)
 			{
 				putchar(i + '0');
 				putchar(j + '0');
@@ -22,9 +26,12 @@ int main(void)
 					break;
 				putchar(',');
 				putchar(' ');
-			}
+				k++;
 
+			}
+			j++;
 		}
+		i++;
 	}
 	putchar('\n');
 	return (0);
