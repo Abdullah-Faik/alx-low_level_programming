@@ -1,12 +1,13 @@
 #include <stdio.h>
 #include "main.h"
 /**
- * print_alphabet- print word
+ * print_alphabet_x10 - print word
 */
 void print_alphabet_x10(void)
 {
 	char x;
 	int i = 0;
+
 	while (i <= 10)
 	{
 		x = 'a';
@@ -16,6 +17,7 @@ void print_alphabet_x10(void)
 			x++;
 		}
 		_putchar('\n');
+		i++;
 	}
 
 }
