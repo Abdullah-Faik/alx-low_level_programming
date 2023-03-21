@@ -14,9 +14,9 @@ void print_to_98(int n)
 		if (n == 98)
 			break;
 		printf(", ");
-		if (n <= 98)
+		if (n < 98)
 			n++;
-		else 
+		else
 			n--;
 	}
 	printf("\n");
