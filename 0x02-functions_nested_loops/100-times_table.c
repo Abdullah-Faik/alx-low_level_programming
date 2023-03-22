@@ -9,13 +9,10 @@ void print_times_table(int n)
 	int i = 1;
 	int j = 1;
 
-	if (n < 15)
+	if (n>= 0 && n < 15)
 	{
 		while (i <= n)
 		{
-			_putchar('0');
-			_putchar(' ');
-			_putchar(' ');
 			j = 0;
 			while (j <= n)
 			{
@@ -25,7 +22,7 @@ void print_times_table(int n)
 					_putchar('0' + k / 100);
 					_putchar('0' + ((k % 100) / 10));
 				}
-				else if (k > 10 && k < 100)
+				else if (k >= 10)
 				{
 					_putchar(' ');
 					_putchar('0' + ((k % 100) / 10));
