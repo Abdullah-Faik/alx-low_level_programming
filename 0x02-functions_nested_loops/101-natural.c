@@ -8,7 +8,6 @@ int main(void)
 	int j = 3;
 	int i = 5;
 	int sum = 0;
-	int q = 1024;
 
 	while (j <= 1024)
 	{
