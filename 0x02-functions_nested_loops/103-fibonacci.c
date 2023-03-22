@@ -8,19 +8,19 @@ int main(void)
 	long int i = 1;
 	long int j = 0;
 	long int fibo = 1;
-	int counter = 0;
+	long int counter = 0;
 
-	while (counter < 50)
+	while (1)
 	{
 		fibo = i + j;
-		printf("%ld", fibo);
+		if (fibo % 2 == 0)
+			counter = counter + fibo;
 		j = i;
 		i = fibo;
-		counter++;
-		if (counter == 49)
+		if (j + i >= 4000000)
 			break;
-		printf(", ");
 	}
+	printf("%ld", counter);
 	printf("\n");
 	return (0);
 }
