@@ -11,6 +11,11 @@ int main(void)
 
 	while (j <= 1024)
 	{
+		if (j % 5 == 0)
+		{
+			j += 3;
+			continue;
+		}
 		sum = sum + j;
 		j += 3;
 	}
