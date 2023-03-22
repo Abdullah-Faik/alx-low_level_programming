@@ -6,10 +6,10 @@
 void print_times_table(int n)
 {
 	int k;
-	int i = 1;
+	int i = 0;
 	int j = 1;
 
-	if (n>= 0 && n < 15)
+	if (n >= 0 && n < 15)
 	{
 		while (i <= n)
 		{
@@ -28,7 +28,7 @@ void print_times_table(int n)
 					_putchar('0' + ((k % 100) / 10));
 
 				}
-				else
+				else if (k > 0)
 				{
 					_putchar(' ');
 					_putchar(' ');
