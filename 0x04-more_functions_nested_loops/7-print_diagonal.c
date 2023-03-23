@@ -4,21 +4,23 @@
  * @n: recive numbers
 */
 void print_diagonal(int n)
-{
-	int i = 0;
-	int j = 0;
-
-	while (i < n)
+{	if(n >= 0)
 	{
-		j = 0;
-		while (j < i)
+		int i = 0;
+		int j = 0;
+
+		while (i < n)
 		{
-			_putchar(' ');
-			j++;
+			j = 0;
+			while (j < i)
+			{
+				_putchar(' ');
+				j++;
+			}
+			i++;
+			_putchar('\\');
+			_putchar('\n');
 		}
-		i++;
-		_putchar('\\');
 		_putchar('\n');
 	}
-	_putchar('\n');
 }
