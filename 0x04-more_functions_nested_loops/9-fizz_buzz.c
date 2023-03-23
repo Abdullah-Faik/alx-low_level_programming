@@ -24,8 +24,10 @@ int main(void)
 		{
 			printf("%d", i);
 		}
-		printf(" ");
 		i++;
+		if (i == 100)
+			break;
+		printf(" ");
 	}
 	printf("\n");
 	return (0);
