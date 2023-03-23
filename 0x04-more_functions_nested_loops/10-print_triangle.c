@@ -25,10 +25,11 @@ void print_triangle(int size)
 				_putchar('#');
 				k++;
 			}
-			i++;
 			if (i == size)
 				break;
 			_putchar('\n');
+			i++;
+
 		}
 		_putchar('\n');
 
