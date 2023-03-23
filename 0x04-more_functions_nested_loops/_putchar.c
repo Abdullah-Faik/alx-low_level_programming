@@ -4,7 +4,7 @@
  * _putchar - printing 
  * @x :  recive value to print
 */
-int mian(void)
+void _putchar(char x)
 {
-	
+	putchar(x);
 }
