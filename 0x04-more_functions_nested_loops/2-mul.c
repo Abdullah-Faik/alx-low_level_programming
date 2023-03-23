@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- *  _isdigit - check uppers
+ *  mul - check uppers
  * @a: recive number
  * @b: recive number
  * Return: 1 or 0
