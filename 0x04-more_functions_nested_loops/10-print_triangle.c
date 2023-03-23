@@ -26,7 +26,11 @@ void print_triangle(int size)
 				k++;
 			}
 			i++;
+			if (i == size)
+				break;
 			_putchar('\n');
 		}
+		_putchar('\n');
+
 	}
 }
