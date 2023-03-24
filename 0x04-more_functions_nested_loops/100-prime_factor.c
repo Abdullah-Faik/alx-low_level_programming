@@ -8,17 +8,21 @@ int main(void)
 	long int x = 612852475143;
 	int j = 2;
 	int i = 0;
+	int k = 0;
 
 	while (i < x / 2)
 	{
 		while (x % j == 0)
 		{
 			x = x / j;
-			printf("%d, ", j);
+			if (j > k)
+				k = j;
 		}
 		j++;
 		i++;
 	}
-	printf("%ld\n", x);
+	if (x > k)
+		k = x;
+	printf("%ld\n", k);
 	return (0);
 }
