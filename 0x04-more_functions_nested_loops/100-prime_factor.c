@@ -23,6 +23,6 @@ int main(void)
 	}
 	if (x > k)
 		k = x;
-	printf("%ld\n", k);
+	printf("%d\n", k);
 	return (0);
 }
