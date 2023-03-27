@@ -1,10 +1,10 @@
 #include <string.h>
 /**
- * _strlen - calculate 
+ * _strlen - calculate
  * @s: recive number
- * return: the length
+ * Return: the length
 */
 int _strlen(char *s)
 {
-	return strlen(s);
+	return (strlen(s));
 }
