@@ -6,5 +6,15 @@
 */
 void print_array(int *a, int n)
 {
-	printf("%d\n", a[n]);
+	int i;
+
+	for (i = 0 ; i < n; i++)
+	{
+		printf("%d", a[n]);
+		if (n == n - 1)
+			break;
+		printf(' ,');
+	}
+	printf("\n");
+
 }
