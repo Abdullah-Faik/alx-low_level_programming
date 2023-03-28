@@ -7,7 +7,7 @@
 */
 int _atoi(char *s)
 {
-	int k, sign, l, i;
+	int k, sign = 1, l, i;
 
 	l = strlen(s);
 	k = atoi(s);
