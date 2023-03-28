@@ -1,16 +1,28 @@
-#include "main.h"
-#include <stdio.h>
 /**
- * _putchar - printing 
- * @x :  recive value to print
+* print_shape - function to print a shape
 */
+#include <stdio.h>
+void print_shape(int num1, int num2) 
+{
+    int idx1, idx2;
+    for (idx1 = 0; idx1 < num1; idx1++)
+    {
+        for (idx2 = 0; idx2 < num2; idx2++)
+        {
+            printf("#");
+        }
+        printf("\n");
+    }
+}
+
+/** 
+* main - calls print_shape()
+*
+* Return: Always 0.
+**/
+
 int main(void)
 {
-	print_triangle(2);
-	print_triangle(10);
-	print_triangle(1);
-	print_triangle(0);
-
-
-	return (0);
+    print_shape(4, 3);
+    return (0);
 }
