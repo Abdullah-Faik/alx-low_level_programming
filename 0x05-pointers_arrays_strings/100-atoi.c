@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include <string.h>
-#include <limits.h> // needed for INT_MAX and INT_MIN
+#include <limits.h>
 
 /**
  * convert - convert number into nint
@@ -16,7 +16,6 @@ int convert(char *c)
     {
 	if (c[i] >= '0' && c[i] <= '9')
 	{
-	    // check for integer overflow
 	       if (r > INT_MAX / 10 || (r == INT_MAX / 10 && c[i] - '0' > INT_MAX % 10))
 			return INT_MAX;
 	    	r = r * 10 + (c[i] - '0');
@@ -35,21 +34,21 @@ int convert(char *c)
  */
 int _atoi(char *s)
 {
-    int k, sign = 1, l, i = 0;
+    	int k, sign = 1, l, i = 0;
 
-    l = strlen(s);
-    k = convert(s);
-    while ((s[i] < '0' || s[i] > '9') && i < l)
-    {
-	if (s[i] == '-')
-	    sign *= -1;
-	if (s[i] >= '0' && s[i] <= '9')
-	    break;
-	i++;
-    }
+    	l = strlen(s);
+   	 k = convert(s);
+    	while ((s[i] < '0' || s[i] > '9') && i < l)
+  	{
+		if (s[i] == '-')
+		    sign *= -1;
+		if (s[i] >= '0' && s[i] <= '9')
+	  	  break;
+		i++;
+    	}
 
-    // check for integer overflow when multiplying by sign
-    if (sign == -1 && k == INT_MAX)
-	return INT_MIN;
-    return (sign * k);
+
+    	if (sign == -1 && k == INT_MAX)
+		return INT_MIN;
+   	 return (sign * k);
 }
