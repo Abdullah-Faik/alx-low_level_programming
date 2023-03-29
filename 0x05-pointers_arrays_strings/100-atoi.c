@@ -29,11 +29,11 @@ int convert(char *c)
 */
 int _atoi(char *s)
 {
-	int k, sign = 1, l, i;
+	int k, sign = 1, l, i = 0;
 
 	l = strlen(s);
 	k = convert(s);
-	while ((s[i] < '0' || i > s[i] > '9') && i < l)
+	while ((s[i] < '0' || s[i] > '9') && i < l)
 	{
 		if (s[i] == '-')
 			sign *= -1;
