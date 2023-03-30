@@ -1,3 +1,4 @@
+#include <stdio.h>
 /**
  * string_toupper - upper case
  * @s: recive
@@ -10,7 +11,7 @@ char *string_toupper(char *s)
 	while (s[i] != '\0')
 	{
 		if (s[i] >= 'a' && s[i] <= 'z')
-			s[i] = s[i] + q;
+			s[i] = s[i] - q;
 		i++;
 	}
 	return (s);
