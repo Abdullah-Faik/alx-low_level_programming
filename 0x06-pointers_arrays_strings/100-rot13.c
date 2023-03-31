@@ -8,7 +8,7 @@ char *rot13(char *s)
 {
 	char c[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char o[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
-	int i, j = 0, k;
+	int i, j = 0;
 
 	while (s[j] != '\0')
 	{
