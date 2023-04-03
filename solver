@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# Get the file name from the user
+echo "Enter a file name:"
+read filename
+
+# Create the file
+touch $filename
+echo  "#!/bin/bash" >> $filename
+# Prompt the user for content to put in the file
+echo "Enter the contents of the file:"
+read content
+
+# Save the content to the file
+echo $content >> $filename
+
+# Make the file executable
+chmod +x $filename
+
+# Run the file
+./$filename
+
