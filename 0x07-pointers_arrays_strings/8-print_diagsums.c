@@ -4,7 +4,6 @@
 * @size: Size of the matrix.
 * Return: void.
 */
-void print_diagsums(int *a, int size);
 void print_diagsums(int *a, int size)
 {
 	int sum1 = 0;
