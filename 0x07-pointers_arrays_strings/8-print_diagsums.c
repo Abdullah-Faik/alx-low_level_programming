@@ -1,5 +1,7 @@
+#include "main.h"
+#include <stdio.h>
 /**
-* print_diagsums - Calculates the sum of the two diagonals of a square matrix.
+print_diagsums - Calculates the sum of the two diagonals of a square matrix.
 * @a: Pointer to the first element of the matrix.
 * @size: Size of the matrix.
 * Return: void.
@@ -9,7 +11,7 @@ void print_diagsums(int *a, int size)
 	int sum1 = 0;
 	int sum2 = 0;
 	int i;
-
+	int digit;
 	for (i = 0; i < size * size; i += size + 1)
 	{
 		sum1 += *(a + i);
@@ -22,7 +24,6 @@ void print_diagsums(int *a, int size)
 
 	printf("Diagonal sum 1: ");
 
-	int digit;
 
 	if (sum1 == 0)
 	{
@@ -33,7 +34,7 @@ void print_diagsums(int *a, int size)
 		while (sum1 > 0)
 		{
 			digit = sum1 % 10;
-			putchar(digit + '0');
+			_putchar(digit + '0');
 			sum1 /= 10;
 		}
 	}
@@ -43,14 +44,14 @@ void print_diagsums(int *a, int size)
 
 	if (sum2 == 0)
 	{
-		putchar('0');
+		_putchar('0');
 	}
 	else
 	{
 		while (sum2 > 0)
 		{
 			digit = sum2 % 10;
-			putchar(digit + '0');
+			_putchar(digit + '0');
 			sum2 /= 10;
 		}
 	}
