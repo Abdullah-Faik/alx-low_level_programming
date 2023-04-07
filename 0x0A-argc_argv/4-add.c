@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <ctype.h>
 /**
  * main - adds numbers
  * @argc: receives
@@ -9,7 +10,7 @@
  */
 int main(int argc, char *argv[])
 {
-	int i, sum = 0;
+	int j, i, sum = 0;
 
 	if (argc == 1)
 	{
@@ -19,6 +20,14 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
+		for (j = 0; argv[i][j] != '\0'; j++)
+		{
+			if (!isdigit((unsigned char) argv[i][j]))
+		    	{
+				printf("Error\n");
+				return (1);
+		    	}
+		}
 		if (strcmp(argv[i], "0") >= 0 && strcmp(argv[i], "9") <= 0)
 		{
 			sum += atoi(argv[i]);
