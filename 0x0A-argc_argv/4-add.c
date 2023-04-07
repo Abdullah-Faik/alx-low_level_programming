@@ -11,6 +11,7 @@ int main(int argc, char *argv[])
 {
 	int sum = 0;
 	int i;
+
 	for (i = 1; i < argc; i++)
 	{
 		char *s = argv[i];
@@ -21,7 +22,7 @@ int main(int argc, char *argv[])
 			if (!isdigit(s[j]))
 			{
 				printf("Error\n");
-				return 1;
+				return (1);
 			}
 			j++;
 		}
@@ -30,5 +31,5 @@ int main(int argc, char *argv[])
 	}
 
 	printf("%d\n", sum);
-	return 0;
+	return (0);
 }
