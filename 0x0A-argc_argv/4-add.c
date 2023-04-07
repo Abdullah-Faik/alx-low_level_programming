@@ -2,9 +2,9 @@
 #include <stdlib.h>
 #include <string.h>
 /**
- * main - adds positive numbers
- * @argc: number of arguments
- * @argv: array of arguments
+ * main - adds numbers
+ * @argc: receives
+ * @argv: receives
  * Return: 0
  */
 int main(int argc, char *argv[])
@@ -26,6 +26,7 @@ int main(int argc, char *argv[])
 		else
 		{
 			printf("Error\n");
+			return(1);
 			exit(0);
 		}
 	}
