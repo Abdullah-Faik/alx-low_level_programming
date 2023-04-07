@@ -23,10 +23,10 @@ int main(int argc, char *argv[])
 		for (j = 0; argv[i][j] != '\0'; j++)
 		{
 			if (!isdigit((unsigned char) argv[i][j]))
-		    	{
+			{
 				printf("Error\n");
 				return (1);
-		    	}
+			}
 		}
 		if (strcmp(argv[i], "0") >= 0 && strcmp(argv[i], "9") <= 0)
 		{
