@@ -11,6 +11,7 @@
 int main(int argc, char *argv[])
 {
 	int j, i, sum = 0;
+	char *s;
 
 	if (argc == 1)
 	{
@@ -20,9 +21,11 @@ int main(int argc, char *argv[])
 
 	for (i = 1; i < argc; i++)
 	{
-		for (j = 0; argv[i][j] != '\0'; j++)
+		
+		s = argv[i];
+		for (j = 0; s[j] != '\0'; j++)
 		{
-			if (!isdigit((unsigned char) argv[i][j]))
+			if (s[j] < '0' || s[j] > '9')
 			{
 				printf("Error\n");
 				return (1);
