@@ -1,11 +1,12 @@
 #include <stdio.h>
+#include <stdlib.h>
 /**
  * main - prints
  * @argc: number of arguments
  * @argv: array of arguments
  * Return: 0
  */
-int main(int argc, __attribute__((unused)) char *argv[])
+int main(int argc, char *argv[])
 {
 	int q, w, e, r, t;
 
@@ -14,7 +15,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 		printf("Error\n");
 		return (1);
 	}
-	argc = argc - 1;
+	argc = atoi(argv[1]);
 	q = argc / 25;
 	argc = argc % 25;
 	w = argc / 10;
