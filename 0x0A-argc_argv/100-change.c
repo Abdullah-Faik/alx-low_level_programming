@@ -11,7 +11,7 @@ int main(int argc, __attribute__((unused)) char *argv[])
 
 	if (argc < 2)
 	{
-		printf("Error");
+		printf("Error\n");
 		return (1);
 	}
 	argc = argc - 1;
@@ -24,6 +24,6 @@ int main(int argc, __attribute__((unused)) char *argv[])
 	r = argc / 2;
 	argc = argc % 2;
 	t = argc / 1;
-	printf("%d", q + w + e + r + t);
+	printf("%d\n", q + w + e + r + t);
 	return (0);
 }
