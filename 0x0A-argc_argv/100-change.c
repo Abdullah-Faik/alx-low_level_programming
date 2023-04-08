@@ -16,6 +16,11 @@ int main(int argc, char *argv[])
 		return (1);
 	}
 	argc = atoi(argv[1]);
+	if (argc < 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	q = argc / 25;
 	argc = argc % 25;
 	w = argc / 10;
