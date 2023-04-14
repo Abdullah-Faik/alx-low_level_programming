@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
+#include <stdio.h>
 
 
 /*
@@ -29,9 +30,11 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	if (n >= strlen(s2))
 		n = strlen(s2);
 
-	s = malloc(sizeof(s1) + n);
-	q = strlen(s1) + n;
-	for (i = 0; i < q - n; q++)
+	s = malloc(sizeof(char) * (strlen(s1) + n + 1));
+	if (s == NULL)
+		return (NULL);
+
+	for (i = 0; i < strlen(s1); i++)
 	{
 		s[i] = s1[i];
 	}
@@ -39,9 +42,9 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 	for (q = 0; q < n; q++)
 	{
-		s[i] = s2[q];
-		i++;
+		s[i + q] = s2[q];
 	}
+	s[i + q] = '\0';
 	return (s);
 
 }
