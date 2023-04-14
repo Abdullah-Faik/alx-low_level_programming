@@ -1,53 +1,3 @@
-// #include "main.h"
-// #include <stdlib.h>
-// #include <string.h>
-// #include <stdio.h>
-
-
-// /*
-//  * Prototype: char *string_nconcat(char *s1, char *s2, unsigned int n);
-//  * The returned pointer shall point to a newly allocated space in memory,
-//  * which contains s1, followed by the first n bytes of s2, and null terminated
-//  * If the function fails, it should return NULL
-//  * If n is greater or equal to the length of s2 then use the entire string s2
-//  * if NULL is passed, treat it as an empty string
-// */
-// /**
-//  * string_nconcat - concatenates two strings
-//  * @s1: first string
-//  * @s2: second string
-//  * @n: number of bytes to concatenate
-//  * Return: pointer to new string
-// */
-
-// char *string_nconcat(char *s1, char *s2, unsigned int n)
-// {
-// 	char *s;
-// 	unsigned int i, q = 0;
-
-// 	if (s1 == NULL)
-// 		s1 = "";
-// 	if (n >= strlen(s2))
-// 		n = strlen(s2);
-
-// 	s = malloc(sizeof(char) * (strlen(s1) + n + 1));
-// 	if (s == NULL)
-// 		return (NULL);
-
-// 	for (i = 0; i < strlen(s1); i++)
-// 	{
-// 		s[i] = s1[i];
-// 	}
-// 	if (s2 == NULL)
-// 		s2 = "";
-// 	for (q = 0; q < n; q++)
-// 	{
-// 		s[i + q] = s2[q];
-// 	}
-// 	s[i + q] = '\0';
-// 	return (s);
-
-// }
 #include "main.h"
 #include <stdlib.h>
 #include <string.h>
@@ -88,7 +38,7 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	total_len = s1_len + n;
 
-	s = malloc(total_len + 1); // +1 for null terminator
+	s = malloc(total_len + 1);
 
 	if (s == NULL)
 		return (NULL);
