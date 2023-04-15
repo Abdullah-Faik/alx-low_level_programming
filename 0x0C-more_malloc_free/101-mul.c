@@ -83,6 +83,12 @@ int main(int argc, char *argv[])
 		}
 		i++;
 	}
+	if (atoi(argv[1]) == 0 || atoi(argv[2]) == 0)
+	{
+		printf("0\n");
+		return (0);
+	}
 	mult(argv);
 	return (0);
+
 }
