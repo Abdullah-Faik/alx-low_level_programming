@@ -1,6 +1,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <ctype.h>
 /**
  * main - multiplies two numbers
  * @argc: number of arguments
@@ -41,6 +42,6 @@ int main(int argc, char *argv[])
 	i2 = atoi(argv[2]);
 
 	sum = i1 * i2;
-	printf("%d\n", sum);
+	printf("%f\n", sum);
 	return (0);
 }
