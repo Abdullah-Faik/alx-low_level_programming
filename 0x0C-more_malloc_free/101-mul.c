@@ -5,7 +5,6 @@
 
 /**
  * mult - multiplies two numbers
- * @argc: number of arguments
  * @argv: array of arguments
  * Return: 0
 */
@@ -22,7 +21,7 @@ void mult(char *argv[])
 	if (p == NULL)
 	{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 	}
 	for (i = l1 - 1; i >= 0; i--)
 	{
@@ -70,7 +69,7 @@ int main(int argc, char *argv[])
 		if (!isdigit(argv[1][i]))
 		{
 		printf("Error\n");
-		exit (98);
+		exit(98);
 		}
 		i++;
 	}
@@ -86,5 +85,4 @@ int main(int argc, char *argv[])
 	}
 	mult(argv);
 	return (0);
-
 }
