@@ -8,10 +8,11 @@
  *
  * Description: struct dog
  */
-struct dog
+struct dog;
 {
 	char *name;
 	char *owner;
 	float age;
 };
+typedef struct dog dog;
 #endif
