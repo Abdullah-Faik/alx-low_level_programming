@@ -1,5 +1,5 @@
 #include "dog.h"
-
+#include <stdlib.h>
 /**
  * init_dog - initialize members of dog
  * @d: pointer to struct dog to modify members of
@@ -9,7 +9,7 @@
  */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	if (d)
+	if (d != NULL)
 	{
 		d->name = name;
 		d->age = age;
