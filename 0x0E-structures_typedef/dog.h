@@ -8,7 +8,7 @@
  *
  * Description: struct dog
  */
-struct dog;
+struct dog
 {
 	char *name;
 	char *owner;
