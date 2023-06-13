@@ -20,6 +20,8 @@ char **strtow(char *str)
 		if (str[i] != ' ')
 			l += 1;
 	}
+	if (l == 0)
+		return (NULL);
 	arr = malloc(sizeof(char *) * (l + 1));
 
 	if (arr == NULL)
