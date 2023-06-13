@@ -22,7 +22,7 @@ char **strtow(char *str)
 	}
 	if (l == 0)
 		return (NULL);
-	arr = malloc(sizeof(char *) * (l + 1));
+	arr = malloc(sizeof(char *) * l);
 
 	if (arr == NULL)
 	{
@@ -31,7 +31,7 @@ char **strtow(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] != ' ' || str[i + 1] == '\0')
+		if (str[i] != ' ')
 		{
 			for (j = i; str[j] != ' ' && str[j] != '\0'; j++)
 			{
@@ -59,4 +59,3 @@ char **strtow(char *str)
 	return (arr);
 
 }
-
