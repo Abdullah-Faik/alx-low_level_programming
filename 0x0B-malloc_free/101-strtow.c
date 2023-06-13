@@ -68,22 +68,3 @@ void print_tab(char **tab)
 		printf("%s\n", tab[i]);
 	}
 }
-
-/**
- * main - check the code .
- *
- * Return: Always 0.
- */
-int main(void)
-{
-	char **tab;
-
-	tab = strtow("      Talk        is     cheap.       Show      me     the    code.        ");
-	if (tab == NULL)
-	{
-		printf("Failed\n");
-		return (1);
-	}
-	print_tab(tab);
-	return (0);
-}
