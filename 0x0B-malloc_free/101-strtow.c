@@ -31,7 +31,7 @@ char **strtow(char *str)
 
 	for (i = 0; str[i] != '\0'; i++)
 	{
-		if (str[i] != ' ' && (str[i + 1] == ' ' || str[i + 1] == '\0'))
+		if (str[i] != ' ' || str[i + 1] == '\0')
 		{
 			for (j = i; str[j] != ' ' && str[j] != '\0'; j++)
 			{
@@ -58,4 +58,32 @@ char **strtow(char *str)
 	arr[m] = NULL;
 	return (arr);
 
+}
+void print_tab(char **tab)
+{
+	int i;
+
+	for (i = 0; tab[i] != NULL; ++i)
+	{
+		printf("%s\n", tab[i]);
+	}
+}
+
+/**
+ * main - check the code .
+ *
+ * Return: Always 0.
+ */
+int main(void)
+{
+	char **tab;
+
+	tab = strtow("      Talk        is     cheap.       Show      me     the    code.        ");
+	if (tab == NULL)
+	{
+		printf("Failed\n");
+		return (1);
+	}
+	print_tab(tab);
+	return (0);
 }
