@@ -4,19 +4,32 @@
 #include <string.h>
 
 /**
+ * _strlen - returns the length of a string
+ * @s: string
+ * Return: length of string
+ */
+int _strlen(char *s)
+{
+	int i = 0;
+
+	while (s[i])
+		i++;
+	return (i);
+}
+/**
  * strtow - splits a string into words
  * @str: string to split
  * Return: pointer to an array of strings
  */
 char **strtow(char *str)
 {
-	int len = 0, wordlen = 0, i = 0, numWords = 0, k = 0, j = 0, l = 0;
-	char **arr, **ar;
+	int len = 0, wordlen = 0, i = 0, k = 0, j = 0, l = 0;
+	char **arr;
 
 	if (str == NULL || str[0] == '\0')
 		return (NULL);
 
-	for (i = 0; i <= strlen(str); i++)
+	for (i = 0; i <= _strlen(str); i++)
 	{
 		wordlen = 0;
 		j = i;
@@ -35,7 +48,7 @@ char **strtow(char *str)
 	arr = malloc(sizeof(char *) * (len + 1));
 	if (arr == NULL)
 		return (NULL);
-	for (i = 0; i < strlen(str); i++)
+	for (i = 0; i < _strlen(str); i++)
 	{
 		wordlen = 0;
 		j = i;
