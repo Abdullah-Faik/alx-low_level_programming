@@ -17,17 +17,14 @@ int _strlen(char *s)
 	return (i);
 }
 /**
- * strtow - splits a string into words
- * @str: string to split
- * Return: pointer to an array of strings
- */
-char **strtow(char *str)
-{
-	int len = 0, wordlen = 0, i = 0, k = 0, j = 0, l = 0;
-	char **arr;
+ * len_calc - calculates the length of each word
+ * @str: string
+ * Return: length of word
+*/
 
-	if (str == NULL || str[0] == '\0')
-		return (NULL);
+int len_calc(char *str)
+{
+	int len = 0, wordlen = 0, i = 0, j = 0;
 
 	for (i = 0; i <= _strlen(str); i++)
 	{
@@ -42,9 +39,23 @@ char **strtow(char *str)
 		if (wordlen > 0)
 			len += 1;
 	}
+	return (len);
+}
+/**
+ * strtow - splits a string into words
+ * @str: string to split
+ * Return: pointer to an array of strings
+ */
+char **strtow(char *str)
+{
+	int len = 0, wordlen = 0, i = 0, k = 0, j = 0, l = 0;
+	char **arr;
 
+	if (str == NULL || str[0] == '\0')
+		return (NULL);
+	len = len_calc(str);
 	if (len == 0)
-		return NULL;
+		return (NULL);
 	arr = malloc(sizeof(char *) * (len + 1));
 	if (arr == NULL)
 		return (NULL);
