@@ -14,9 +14,9 @@ typedef struct list_s list_t;
  */
 struct list_s
 {
-    char *s;
-    unsigned int l;
-    struct list_s *next;
+	char *s;
+	unsigned int l;
+	struct list_s *next;
 };
 size_t print_list(const list_t *h);
 #endif
