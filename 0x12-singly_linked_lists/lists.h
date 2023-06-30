@@ -6,8 +6,8 @@ int _putchar(char c);
 typedef struct list_s list_t;
 /**
  * struct list_s - singly linked list
- * @s: string - (malloc'ed string)
- * @l: length of the string
+ * @str: string - (malloc'ed string)
+ * @len: length of the string
  * @next: points to the next node
  *
  * Description: singly linked list node structure
