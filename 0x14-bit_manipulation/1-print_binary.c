@@ -20,14 +20,12 @@ void print_binary(unsigned long int n)
 		if (n >= k)
 		{
 			f = 1;
-			printf("1");
 			_putchar('1');
 			n -= k;
 		}
 		else
 		{
 			if (f == 1)
-				printf("0");
 			_putchar('0');
 		}
 		k = k >> 1;
