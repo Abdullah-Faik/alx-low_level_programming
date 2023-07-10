@@ -8,12 +8,9 @@
 #include <fcntl.h>
 #include <unistd.h>
 #define or ||
-#define is ==
-#define is_not !=
+#define is (==)
+#define is_not (!=)
 
-#define or ||
-#define is ==
-#define is_not !=
 ssize_t read_textfile(const char *filename, size_t letters);
 
 #endif
