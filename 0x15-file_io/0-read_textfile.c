@@ -13,15 +13,15 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	char *text;
 
 	o = open(filename, O_RDONLY);
-	if (!*filename or o is - 1)
+	if (!*filename || o == - 1)
 		return (0);
 
 	file = fdopen(o, "r");
-	if (file is 0)
+	if (file == 0)
 		return (0);
 
 	text = (char *)malloc(letters + 1);
-	if (text is NULL)
+	if (text == NULL)
 	{
 		fclose(file);
 		return (0);
