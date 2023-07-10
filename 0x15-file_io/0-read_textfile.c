@@ -7,34 +7,41 @@
  */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	ssize_t i = 0;
-	int o;
-	FILE *file;
-	char *text;
+	char *text = (char *)malloc(letters);
+	int file = open(filename, O_RDONLY);
+	ssize_t bytesRead;
+	ssize_t bytesWritten;
 
-	o = open(filename, O_RDONLY);
-	if (!filename || o == -1)
+	if (filename == NULL)
 		return (0);
 
-	file = fdopen(o, "r");
-	if (file == NULL)
+	if (file == -1)
 		return (0);
 
-	text = (char *)malloc(letters + 1);
 	if (text == NULL)
 	{
-		fclose(file);
+		close(file);
 		return (0);
 	}
-	i = fread(text, sizeof(char), letters, file);
-	if (i != (ssize_t)letters)
+
+	bytesRead = read(file, text, letters);
+	if (bytesRead == -1)
 	{
 		free(text);
-		fclose(file);
+		close(file);
 		return (0);
 	}
-	write(1, text, i);
+
+	bytesWritten = write(STDOUT_FILENO, text, bytesRead);
+	if (bytesWritten == -1 || bytesWritten != bytesRead)
+	{
+		free(text);
+		close(file);
+		return (0);
+	}
+
 	free(text);
-	fclose(file);
-	return (i);
+	close(file);
+	return (bytesWritten);
 }
+
