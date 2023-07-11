@@ -21,6 +21,7 @@ int main(int args , char *argv[])
 	flag_input = O_RDONLY;
 	flag_output = O_WRONLY | O_CREAT | O_TRUNC;
 	mode_output = S_IRUSR | S_IWUSR | S_IRGRP | S_IWGRP | S_IROTH;
+	
 
 	if (args != 3)
 	{
