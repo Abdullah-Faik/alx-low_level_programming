@@ -8,14 +8,14 @@
 ssize_t read_textfile(const char *filename, size_t letters)
 {
 	char *text = (char *)malloc(letters);
-	int file = open(filename, O_RDONLY);
+	size_t file = open(filename, O_RDONLY);
 	ssize_t bytesRead;
 	ssize_t bytesWritten;
 
 	if (filename == NULL)
 		return (0);
 
-	if (file == -1)
+	if ((int)file == -1)
 		return (0);
 
 	if (text == NULL)
