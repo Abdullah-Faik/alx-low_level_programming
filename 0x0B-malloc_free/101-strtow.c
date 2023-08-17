@@ -48,7 +48,7 @@ int len_calc(char *str)
  */
 char **strtow(char *str)
 {
-	int len = 0, wordlen = 0, i = 0, k = 0, j = 0, l = 0;
+	int len = 0, wordlen = 0, i = 0, k = 0, l = 0;
 	char **arr;
 
 	if (str == NULL || str[0] == '\0')
@@ -62,11 +62,9 @@ char **strtow(char *str)
 	for (i = 0; i < _strlen(str); i++)
 	{
 		wordlen = 0;
-		j = i;
-		while (str[j] != ' ' && str[j] != '\0')
+		while (str[i] != ' ' && str[i] != '\0')
 		{
 			wordlen++;
-			j++;
 			i++;
 		}
 		if (wordlen > 0)
