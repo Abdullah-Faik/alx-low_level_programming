@@ -6,16 +6,18 @@
 */
 int _putchar(char c)
 {
-	return (write(1, &c, 1));
+	(void) c;
+	return 0;
 }
 /**
  * _islower - checks for lowercase character
  * @c: character to check
  * Return: 1 if c is lowercase, otherwise 0
 */
-int _islower(int c)
+int _islower( int c)
 {
-	return (c >= 'a' && c <= 'z');
+	(void) c;
+	return 0;
 }
 /**
  * _isalpha - checks for alphabetic character
