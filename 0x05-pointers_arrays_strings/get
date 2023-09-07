@@ -1,8 +1,8 @@
 #!/bin/bash
 git add .
-echo "enter task number"
+echo "enter commit"
 read var
-git commit -m"task number $var"
+git commit -m"$var"
 git push origin
 echo "done"
 clear
