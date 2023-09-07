@@ -42,6 +42,8 @@ unsigned long int key_index(const unsigned char *key, unsigned long int size);
 /*seter and getter */
 int hash_table_set(hash_table_t *ht, const char *key, const char *value);
 char *hash_table_get(const hash_table_t *ht, const char *key);
+int create_node(hash_table_t *ht, hash_node_t *node, unsigned long int indx,
+				const char *key, const char *value);
 
 /* print and delete*/
 void hash_table_delete(hash_table_t *ht);
